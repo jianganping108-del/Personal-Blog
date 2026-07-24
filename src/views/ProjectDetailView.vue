@@ -1,5 +1,5 @@
 <script setup>
-import { ArrowLeft, ArrowRight, Check } from "@lucide/vue";
+import { ArrowLeft, ArrowRight, Check, ExternalLink } from "@lucide/vue";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { getProjectBySlug, projects } from "../data/projects";
@@ -13,7 +13,7 @@ const nextProject = computed(() => currentIndex.value < 0 ? null : projects[(cur
   <div v-if="project" class="detail-page">
     <section v-reveal class="detail-hero section-shell">
       <router-link class="back-link" to="/projects"><ArrowLeft :size="17" /> 返回项目</router-link>
-      <div class="detail-title-grid"><div><p class="eyebrow">项目案例 · {{ String(currentIndex + 1).padStart(2, "0") }}</p><h1>{{ project.name }}</h1></div><p>{{ project.summary }}</p></div>
+      <div class="detail-title-grid"><div><p class="eyebrow">项目案例 · {{ String(currentIndex + 1).padStart(2, "0") }}</p><h1>{{ project.name }}</h1></div><div class="detail-summary"><p>{{ project.summary }}</p><a v-if="project.liveUrl" class="button button-secondary" :href="project.liveUrl" target="_blank" rel="noopener noreferrer">访问项目 <ExternalLink :size="17" /></a></div></div>
       <div class="detail-cover"><img :src="project.cover" :alt="`${project.name}界面截图`" /></div>
     </section>
     <section v-reveal class="detail-content section-shell">

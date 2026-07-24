@@ -8,6 +8,7 @@ export const projects = [
       "基于 FastAPI、Celery 与 Redis 构建异步多模态格式转换服务，支持视频、Office、PDF 等五条转换链路，并将 OCR、语音识别与结构化输出统一到可扩展的任务管道中。",
     techStack: ["FastAPI", "Celery", "Redis", "OCR", "AsyncIO"],
     cover: "/projects/multimodal-converter.webp",
+    liveUrl: "http://124.223.16.81:8081/test",
     highlights: [
       "按文件类型进行管道路由，覆盖视频、Office、PDF 等五类转换链路",
       "使用 Celery 与 Redis 解耦耗时任务，提供任务状态与结果查询能力",
@@ -24,6 +25,7 @@ export const projects = [
       "独立完成大模型订阅管理与 API Key 中转服务的部署上线，使用 Docker 组织运行环境，通过 Linux 与 Nginx 完成服务配置、反向代理和基础运维。",
     techStack: ["Docker", "Linux", "Nginx", "Operations"],
     cover: "/projects/sub2api.webp",
+    liveUrl: "https://rapidapi.jianganping.online",
     highlights: [
       "使用 Docker 完成应用容器化部署与运行环境隔离",
       "配置 Nginx 反向代理与服务入口，梳理部署链路",
@@ -40,6 +42,7 @@ export const projects = [
       "独立运维学校官网超过一年，处理教师用户的日常使用问题并按需求迭代页面；同时基于 Elasticsearch 完成多条件关键词检索功能，覆盖大规模文本数据。",
     techStack: ["Spring Boot", "Vue", "MySQL", "Redis", "Elasticsearch"],
     cover: "/projects/school-website.webp",
+    liveUrl: "https://www.gzmdrw.cn/znss/",
     highlights: [
       "持续运维学校官网超过一年，响应教师用户问题并完成页面调整",
       "独立完成多条件筛选的后端关键词检索功能",

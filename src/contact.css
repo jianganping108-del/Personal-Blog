@@ -11,6 +11,18 @@
 
 .footer-mail { border-bottom: 0; }
 
+.detail-summary > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.detail-summary .button {
+  width: fit-content;
+  margin-top: 24px;
+}
+
 .about-strengths {
   display: grid;
   grid-template-columns: .8fr 1.2fr;
