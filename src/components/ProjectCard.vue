@@ -4,7 +4,7 @@ defineProps({ project: { type: Object, required: true }, index: { type: Number, 
 </script>
 
 <template>
-  <router-link class="project-card" :to="`/projects/${project.slug}`">
+  <router-link v-reveal="{ delay: Math.min(index * 90, 270) }" class="project-card" :to="`/projects/${project.slug}`">
     <div class="project-media"><img :src="project.cover" :alt="`${project.name}项目截图`" /></div>
     <div class="project-card-body">
       <span class="project-number">{{ String(index + 1).padStart(2, "0") }}</span>
